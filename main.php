@@ -8,8 +8,12 @@
 <body>
     
 <?php
-    $GLOBALS['db']->open_query("SELECT * FROM dupa");
-    $GLOBALS['db']->close_query();
+    $sql = $GLOBALS['db']->query("SELECT * FROM users");
+    while($elements = $sql->fetch_assoc()) {
+        foreach($elements as $name => $ele) {
+            echo "<p>$name : $ele</p>";
+        }
+    }
 ?>
 
 </body>
