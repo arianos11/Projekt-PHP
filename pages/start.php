@@ -3,6 +3,9 @@
 session_start();
 @include_once(__DIR__.'/../config/db.php');
 
+$GLOBALS['db'] = new DB;
+$GLOBALS['db']->connect();
+
 ?>
 
 <!DOCTYPE html>
@@ -14,13 +17,3 @@ session_start();
 </head>
 <body>
     
-<?php
-    
-    $sql = $GLOBALS['db']->query("SELECT * FROM users");
-    while($elements = $sql->fetch_assoc()) {
-        foreach($elements as $name => $ele) {
-            echo "<p>$name : $ele</p>";
-        }
-    }
-?>
-
