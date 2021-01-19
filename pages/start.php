@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+@include_once(__DIR__.'/../config/db.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +15,7 @@
 <body>
     
 <?php
+    
     $sql = $GLOBALS['db']->query("SELECT * FROM users");
     while($elements = $sql->fetch_assoc()) {
         foreach($elements as $name => $ele) {
@@ -16,5 +24,3 @@
     }
 ?>
 
-</body>
-</html>

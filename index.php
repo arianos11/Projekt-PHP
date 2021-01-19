@@ -1,10 +1,11 @@
 <?php
 
-session_start();
 
-@include_once('./config/db.php');
-@include_once('./main.php');
+@include_once(__DIR__.'/pages/start.php');
+
+$_SESSION['dupa'] = 'test';
+
+@include_once(__DIR__.'/pages/end.php');
 
 
-$GLOBALS['db']->close();
 ?>
