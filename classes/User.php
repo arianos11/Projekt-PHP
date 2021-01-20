@@ -16,6 +16,8 @@
                           VALUES(:first, :last, :email, :password)";
                 $sql = $GLOBALS['db']->query($query, $sqlTypes);
 
+                return 'DONE';
+
             } else {
                 return ['error', 'Hasła się nie zgadzają!'];
             }
