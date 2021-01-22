@@ -1,10 +1,6 @@
 <?php
 
-session_start();
-@include_once(__DIR__.'/../config/db.php');
-
-$GLOBALS['db'] = new DB;
-$GLOBALS['db']->connect();
+@include_once(__DIR__.'../config/init.php');
 
 ?>
 

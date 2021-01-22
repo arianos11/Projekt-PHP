@@ -18,16 +18,19 @@ if(isset($_POST['first']) && isset($_POST['last']) && !empty($_POST['first']) &&
 
         } else {
             $_SESSION['register_error'] = "Brak hasła!";
+            $_SESSION['register'] = TRUE;
             header("Location: rejestracja.php");
         }
 
     } else {
         $_SESSION['register_error'] = "Brak emaila!";
+        $_SESSION['register'] = TRUE;
         header("Location: rejestracja.php");
     }
 
 } else {
     $_SESSION['register_error'] = 'Brak imienia lub nazwiska!';
+    $_SESSION['register'] = TRUE;
     header("Location: rejestracja.php");
 }
 

@@ -17,8 +17,10 @@
 
 <?php
 
-if(isset($_SESSION['register_error'])) {
-    echo $_SESSION['register_error'];
+if(isset($_SESSION['register'])) {
+    if(isset($_SESSION['register_error'])) {
+        echo $_SESSION['register_error'];
+    } 
 }
 
 @include_once(__DIR__.'/pages/end.php');
