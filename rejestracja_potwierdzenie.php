@@ -16,7 +16,7 @@ if(isset($_POST['first']) && isset($_POST['last']) && !empty($_POST['first']) &&
 
             $result = User::registerUser($_POST['first'], $_POST['last'], $_POST['email'], $_POST['password1'], $_POST['password2']);
 
-            if($result[0] === "sucess") {
+            if($result[0] === "success") {
                 echo "Success";
                 unset($_SESSION['register']);
             } else {

@@ -4,17 +4,17 @@
 
         public static function registerUser($first, $second, $email, $password1, $password2) {
 
+            // Regex check email
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return ['error', 'Niepoprawny adres email!'];
+            }
+
             //Check if email exists
             $sqlTypes = ['email' => $email];
             $query = "SELECT user_id FROM users WHERE user_email = :email";
             $sql = $GLOBALS['db']->query($query, $sqlTypes);
             if(!empty($sql)) {
                 return ['error', 'Email jest już zarejestrowany!'];
-            }
-
-            // Regex check email
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                return ['error', 'Niepoprawny adres email!'];
             }
 
             //Check passwords
@@ -45,6 +45,28 @@
             return ['success', 'Poprawna rejestracja'];
             
         } 
+
+        public static function loginUser($email, $password) {
+
+            // Regex check email
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return ['error', 'Niepoprawny adres email!'];
+            }
+
+            //Check if email exists
+            $sqlTypes = ['email' => $email];
+            $query = "SELECT user_id, user_password FROM users WHERE user_email = :email";
+            $sql = $GLOBALS['db']->query($query, $sqlTypes);
+            if(empty($sql)) {
+                return ['error', 'Niepoprawne dane logowania'];
+            }
+
+            if(!password_verify($password, $sql[0]['user_password'])) {
+                return ['error', 'Niepoprawne dane logowania'];
+            }
+
+            return['success', $sql[0]['user_id']];
+        }
 
     }
 
