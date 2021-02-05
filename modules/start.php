@@ -12,4 +12,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+<?php
+    print_r($_SESSION);
+    @include_once(__DIR__.'/naglowek.php');
+?>
