@@ -28,6 +28,9 @@ if(isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email']
         if(isset($_SESSION['login_error'])) {
             unset($_SESSION['login_error']);
         }
+        if(isset($_SESSION['login_email'])) {
+            unset($_SESSION['login_email']);
+        }
         header("Location: index.php");
     } else {
         $_SESSION['login_error'] = $result[1];
