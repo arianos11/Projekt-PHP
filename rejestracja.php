@@ -14,27 +14,9 @@
     <input type="password" name="password2" placeholder="Potwierdź hasło">
     <input type="submit" value="Rejestrajca">
 </form>
+<p style="color: red"><?php echo isset($_SESSION['register_error']) ? $_SESSION['register_error'] : '' ?></p>
 
 <?php
-
-if(isset($_SESSION['register'])) {
-    if(isset($_SESSION['register_error'])) {
-        print_r($_SESSION['register_error']);
-    } 
-
-    if(isset($_SESSION['register_name_1'])) {
-        unset($_SESSION['register_name_1']);
-    }
-
-    if(isset($_SESSION['register_name_2'])) {
-        unset($_SESSION['register_name_2']);
-    }
-
-    if(isset($_SESSION['register_email'])) {
-        unset($_SESSION['register_email']);
-    }
-
-}
 
 @include_once(__DIR__.'/modules/end.php');
 

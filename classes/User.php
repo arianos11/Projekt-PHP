@@ -42,6 +42,22 @@
                       VALUES(:first, :last, :email, :password)";
             $sql = $GLOBALS['db']->query($query, $sqlTypes);
 
+            if(isset($_SESSION['register'])) {
+    
+                if(isset($_SESSION['register_name_1'])) {
+                    unset($_SESSION['register_name_1']);
+                }
+            
+                if(isset($_SESSION['register_name_2'])) {
+                    unset($_SESSION['register_name_2']);
+                }
+            
+                if(isset($_SESSION['register_email'])) {
+                    unset($_SESSION['register_email']);
+                }
+            
+            }
+
             return ['success', 'Poprawna rejestracja'];
             
         } 

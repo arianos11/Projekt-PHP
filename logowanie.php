@@ -9,6 +9,7 @@
     <input type="password" name="password" placeholder="Hasło">
     <input type="submit" value="Zaloguj">
 </form>
+<p style="color: red"><?php echo isset($_SESSION['login_error']) ? $_SESSION['login_error'] : '' ?></p>
 
 <?php
 
@@ -31,7 +32,7 @@ if(isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email']
     } else {
         $_SESSION['login_error'] = $result[1];
         $_SESSION['login_email'] = $_POST['email'];
-        print_r($result[1]);
+        header("Location: logowanie.php");
     }
 
 }
