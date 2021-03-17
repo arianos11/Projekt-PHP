@@ -5,7 +5,9 @@
 
 ?>
 
-<h1>Strona główna</h1>
+<section class="main">
+
+</section>
 
 <a href="logowanie.php">Logowanie</a><br />
 <a href="rejestracja.php">Rejestracja</a><br />
