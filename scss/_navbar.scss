@@ -1,0 +1,47 @@
+.menu {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-second;
+
+    &--left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--logo {
+            margin-left: 3rem;
+            color: $color-white;
+
+            p {
+                font-size: $font-size-large;
+            }
+        }
+    }
+
+    &--right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &--element {
+            margin-left: 2rem;
+            font-size: 1.5rem;
+            color: $color-white;
+            text-decoration: none;
+
+            &:visited {
+                color: $color-white;
+                text-decoration: none;
+            }
+
+            &:last-of-type {
+                background-color: $color-main;
+                padding: .5rem 1rem;
+                border-radius: 1rem;
+                margin-right: 3rem;
+            }
+        }
+    }
+}

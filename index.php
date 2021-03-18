@@ -6,12 +6,15 @@
 ?>
 
 <section class="main">
-
+    <h1>Dobre żarcie - Catering Dietetyczny</h1>
+    <div class="main--darker"></div>
+</section>
+<section class="index--offer">
+    <h2>Oferta</h2>
+    
 </section>
 
-<a href="logowanie.php">Logowanie</a><br />
-<a href="rejestracja.php">Rejestracja</a><br />
-<a href="wyloguj.php">Wyloguj</a><br />
+
 
 <?php
 

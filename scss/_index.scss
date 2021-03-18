@@ -1,0 +1,36 @@
+.main {
+   
+
+    height: 70vh;
+    width: 100%;
+    background-image: url('./img/main.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    &--darker {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .3;
+    }
+
+    h1 {
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+        z-index: 2;
+        font-size: 2.5rem;
+    }
+        
+}
+
+.index {
+
+    &--offer {
+        
+    }
+}
