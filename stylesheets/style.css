@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Shadows Into Light Two', cursive; }
+
+.menu {
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #34495e; }
+  .menu--left {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .menu--left--logo {
+      margin-left: 3rem;
+      color: #fff; }
+      .menu--left--logo p {
+        font-size: 2rem; }
+  .menu--right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .menu--right--element {
+      margin-left: 2rem;
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none; }
+      .menu--right--element:visited {
+        color: #fff;
+        text-decoration: none; }
+      .menu--right--element:last-of-type {
+        background-color: #3498db;
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+        margin-right: 3rem; }
+
+.main {
+  height: 70vh;
+  width: 100%;
+  background-image: url("../img/main.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+  .main--darker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .3; }
+  .main h1 {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 2;
+    font-size: 3rem; }
+
+.index--offer {
+  margin-top: 2rem; }
+  .index--offer h2 {
+    text-align: center;
+    font-size: 3rem;
+    position: relative; }
+    .index--offer h2::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 200px;
+      height: 2px;
+      background-color: #3498db;
+      transform: translate(-50%, -50%); }
+
+.card_slider--container {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.card_slider--item {
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2rem;
+  width: 20%; }
+  .card_slider--item--title {
+    text-align: center;
+    font-size: 2rem; }
+  .card_slider--item--image {
+    height: 15vh;
+    width: 100%;
+    background-image: url("../img/defaultDiet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 2rem 2rem 0 0; }
+  .card_slider--item--price {
+    text-align: center; }
+    .card_slider--item--price__first {
+      font-size: 1.2rem; }
+    .card_slider--item--price__second {
+      font-size: 2.4rem; }
+  .card_slider--item--button {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    .card_slider--item--button a {
+      color: white;
+      padding: .5rem 2rem;
+      background-color: #3498db;
+      text-decoration: none;
+      border-radius: 2rem; }

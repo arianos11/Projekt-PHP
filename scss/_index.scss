@@ -3,7 +3,7 @@
 
     height: 70vh;
     width: 100%;
-    background-image: url('./img/main.jpg');
+    background-image: url('../img/main.jpg');
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -18,12 +18,12 @@
 
     h1 {
         position: absolute;
-        top: 54%;
+        top: 56%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: $color-white;
         z-index: 2;
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
         
 }
@@ -31,6 +31,25 @@
 .index {
 
     &--offer {
+        
+        margin-top: 2rem;
+
+        h2 {
+            text-align: center;
+            font-size: 3rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 200px;
+                height: 2px;
+                background-color: $color-main;
+                transform: translate(-50%, -50%);
+            }
+        }
         
     }
 }

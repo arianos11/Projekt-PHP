@@ -5,8 +5,8 @@
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css": "node-sass scss/style.scss -o ./",
-    "css:watch": "npm run css && node-sass scss/style.scss -wo ./"
+    "css": "node-sass scss/style.scss -o ./stylesheets/",
+    "css:watch": "npm run css && node-sass scss/style.scss -wo ./stylesheets/"
   },
   "repository": {
     "type": "git",
