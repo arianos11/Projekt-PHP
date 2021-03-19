@@ -1,6 +1,6 @@
 <?php
 
-@include_once(__DIR__.'/../modules/start.php');
+@include_once(__DIR__.'/../modules/startAdmin.php');
 
 @include_once(__DIR__.'/../classes/Admin.php');
 

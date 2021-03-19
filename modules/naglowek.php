@@ -1,3 +1,25 @@
+<?php
+
+$link = explode('/', $_SERVER[REQUEST_URI]);
+
+$isAdmin = false;
+
+foreach ($link as $element) {
+    if($element === 'admin' {
+        $isAdmin = true
+    });
+}
+
+if($isAdmin) {
+
+?>
+
+<h2>Nagłowek admin</h2>
+
+<?php
+} else {
+?>
+
 <nav class="menu">
     <div class="menu--left">
         <div class="menu--left--logo">
@@ -17,3 +39,8 @@
         ?>
     </div>
 </nav>
+<?php
+
+}
+
+?>
