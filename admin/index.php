@@ -1,10 +1,12 @@
 <?php
 
-@include_once(__DIR__.'/../modules/startAdmin.php');
+@include_once(__DIR__.'/../adminModules/startAdmin.php');
 
 @include_once(__DIR__.'/../classes/Admin.php');
 
 Admin::checkAdmin($_SESSION['admin_logged']);
+
+
 
 ?>
 
@@ -14,7 +16,7 @@ Admin::checkAdmin($_SESSION['admin_logged']);
 
 <?php
 
-@include_once(__DIR__.'/../modules/end.php');
+@include_once(__DIR__.'/../adminModules/end.php');
 
 
 ?>
