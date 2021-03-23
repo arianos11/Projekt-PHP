@@ -9,7 +9,7 @@ Admin::checkAdmin($_SESSION['admin_logged']);
 ?>
 
 <section class="mainAdmin">
-    Strona administratora
+    Dodaj diete
 </section>
  
 <?php

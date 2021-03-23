@@ -1,6 +1,8 @@
 <?php
 
-@include_once(__DIR__.'/../modules/startAdmin.php');
+@include_once(__DIR__.'/../adminModules/startAdmin.php');
+
+print_r($_SESSION);
 
 ?>
 
