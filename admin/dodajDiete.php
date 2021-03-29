@@ -29,7 +29,10 @@ if(isset($_POST['name']) && isset($_POST['price'])
     $result = Diet::addDiet($_POST['name'],$_POST['price'],$_POST['photo'],$_POST['description']);
     if($result[0] === "success") {
         echo "Success";
-        
+        unset($_SESSION['diet_name']);
+        unset($_SESSION['diet_price']);
+        unset($_SESSION['diet_photo']);
+        unset($_SESSION['diet_description']);
     } else {
         $_SESSION['diet_name'] = $_POST['name'];
         $_SESSION['diet_price'] = $_POST['price'];
