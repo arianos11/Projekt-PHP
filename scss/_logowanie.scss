@@ -1,0 +1,38 @@
+.login {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    span {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    &--input {
+
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        border: 1px solid $color-main;
+        padding: .1rem 1rem;
+
+        &__button {
+            font-size: 1.7rem;
+            border: none;
+            background-color: $color-main;
+            padding: .1rem 2rem;
+            color: $color-white;
+        }
+
+    }
+
+}

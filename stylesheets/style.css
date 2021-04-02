@@ -118,3 +118,29 @@
 
 .mainAdmin {
   margin-left: 20vw; }
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .login h1 {
+    margin-bottom: 1rem; }
+  .login span {
+    margin-top: 1rem;
+    font-size: 1.2rem; }
+  .login--input {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #3498db;
+    padding: .1rem 1rem; }
+    .login--input__button {
+      font-size: 1.7rem;
+      border: none;
+      background-color: #3498db;
+      padding: .1rem 2rem;
+      color: #fff; }

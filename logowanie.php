@@ -4,12 +4,15 @@
 
 ?>
 
-<form action="logowanie.php" method="post">
-    <input type="text" name="email" placeholder="Adres email" value="<?php echo isset($_SESSION['login_email']) ? $_SESSION['login_email'] : '' ?>">
-    <input type="password" name="password" placeholder="Hasło">
-    <input type="submit" value="Zaloguj">
+<form class="login" action="logowanie.php" method="post">
+    <h1>Zaloguj się</h1>
+    <input class="login--input" type="text" name="email" placeholder="Adres email" value="<?php echo isset($_SESSION['login_email']) ? $_SESSION['login_email'] : '' ?>">
+    <input class="login--input" type="password" name="password" placeholder="Hasło">
+    <input class="login--input__button" type="submit" value="Zaloguj">
+    <span>Jeżeli nie masz konta <a href="rejestracja.php">zarejestruj się</a></span>
+    <p style="color: red"><?php echo isset($_SESSION['login_error']) ? $_SESSION['login_error'] : '' ?></p>
 </form>
-<p style="color: red"><?php echo isset($_SESSION['login_error']) ? $_SESSION['login_error'] : '' ?></p>
+
 
 <?php
 
