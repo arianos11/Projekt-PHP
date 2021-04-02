@@ -4,7 +4,7 @@
 
     if($_SESSION['admin_logged']) {
         session_destroy();
-        header('Location: /projekt/admin/logowanie.php');
+        header('Location: /projektArianOrwat4D/admin/logowanie.php');
     } else {
         session_destroy();
         header('Location: logowanie.php');

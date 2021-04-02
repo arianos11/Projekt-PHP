@@ -89,7 +89,7 @@
             if($login) {
                 return true;
             } else {
-                return header("Location: /projekt/admin/logowanie.php");
+                return header("Location: /projektArianOrwat4D/admin/logowanie.php");
             }
 
         }

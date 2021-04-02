@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="menu--right">
-        <a href="/projekt/" class="menu--right--element">Start</a>
+        <a href="/projektArianOrwat4D/" class="menu--right--element">Start</a>
         <a href="/jak-gotujemy" class="menu--right--element">Jak gotujemy</a>
         <a href="/oferta" class="menu--right--element">Oferta</a>
         <?php 
