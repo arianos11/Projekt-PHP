@@ -26,9 +26,10 @@ if(isset($_POST['name']) && isset($_POST['price'])
     && isset($_POST['photo']) && isset($_POST['description']) 
     && !empty($_POST['name']) && !empty($_POST['price']) && !empty($_POST['description'])) {
 
+    print_r($_FILES);
     $result = Diet::addDiet($_POST['name'],$_POST['price'],$_POST['photo'],$_POST['description']);
     print_r($result);
-    if($result[0] === "success") {
+    if(empty($result)) {
         echo "Success";
         unset($_SESSION['diet_name']);
         unset($_SESSION['diet_price']);
