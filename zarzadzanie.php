@@ -6,7 +6,7 @@
 ?>
 
 <section>
-    <h2>Panel zarządzania</h2>
+    <h1>Panel zarządzania</h1>
 </section>
 
 <?php
