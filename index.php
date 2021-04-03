@@ -30,7 +30,7 @@
                                 <span class="card_slider--item--price__first">od <span class="card_slider--item--price__second"><?php echo $diet['diet_price'] ?>zł</span>
                             </div>
                             <div class="card_slider--item--button">
-                                <a href="#">We tu klikni</a>
+                                <a href="zamow.php?id=<?php echo $diet['diet_id']?>">We tu klikni</a>
                             </div>
                         </div>
                     <?php

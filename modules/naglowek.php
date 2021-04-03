@@ -10,7 +10,7 @@
         <a href="/oferta" class="menu--right--element">Oferta</a>
         <?php 
             if(isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
-                echo "<a href='panel_zarzadzania' class='menu--right--element'>Panel zarządzania</a>";
+                echo "<a href='/projektArianOrwat4D/panel_zarzadzania' class='menu--right--element'>Panel zarządzania</a>";
             } else {
                 echo "<a href='logowanie.php' class='menu--right--element'>Zaloguj</a>";
             }  

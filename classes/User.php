@@ -84,6 +84,53 @@
             return['success', $sql[0]['user_id']];
         }
 
+        public static function updatePasswordUser($id, $password1, $password2) {
+
+            //Check passwords
+            if($password1 !== $password2) {
+                return ['error', 'Hasła się nie zgadzają!'];
+            } 
+
+            //Regex check password
+            $uppercase = preg_match('@[A-Z]@', $password1);
+            $lowercase = preg_match('@[a-z]@', $password1);
+            $number    = preg_match('@[0-9]@', $password1);
+            $specialChars = preg_match('@[^\w]@', $password1);
+            if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password1) < 8) {
+                return ['error', 'Hasło musi zawierać co najmniej 8 znaków, wielką i małą literę, cyfrę oraz znak specjalny!'];
+            }
+
+            $options = [
+                'cost' => 12
+            ];
+
+            $password = password_hash($password1, PASSWORD_BCRYPT, $options);
+
+            $sqlTypes = ['id' => $id,'password' => $password];
+            $query = "UPDATE users SET user_password = :password WHERE user_id = :id";
+            $sql = $GLOBALS['db']->query($query, $sqlTypes);
+            return $sql;
+
+        }
+
+        public static function getUserData($id) {
+
+            $sqlTypes = ['id' => $id];
+            $query = "SELECT * FROM users WHERE user_id = :id";
+            $sql = $GLOBALS['db']->query($query, $sqlTypes);
+            return $sql;
+
+        }
+
+        public static function updateUserData($id, $name, $price, $photo, $description, $status) {
+
+            $sqlTypes = ['id' => $id, 'name' => $name, 'price' => $price, 'photo' => $photo, 'description' => $description, 'status' => $status];
+            $query = "UPDATE diets SET diet_name = :name, diet_price = :price, diet_photo = :photo, diet_description = :description, diet_status = :status WHERE diet_id = :id";
+            $sql = $GLOBALS['db']->query($query, $sqlTypes);
+            return $sql;
+
+        }
+
     }
 
 ?>
