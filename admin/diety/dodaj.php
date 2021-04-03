@@ -14,7 +14,6 @@ Admin::checkAdmin($_SESSION['admin_logged']);
     <form class="login" action="dodaj.php" method="post">
         <input class="login--input" type="text" name="name" id="name" placeholder="Nazwa diety">
         <input class="login--input" type="number" name="price" id="price" placeholder="Cena">
-        <input class="login--input" type="file" name="photo" id="photo">
         <textarea class="login--input" name="description" id="description" cols="30" rows="10" placeholder="Opis diety"></textarea>
         <input class="login--input__button" type="submit" value="Dodaj">
     </form>
@@ -23,10 +22,10 @@ Admin::checkAdmin($_SESSION['admin_logged']);
 <?php
 
 if(isset($_POST['name']) && isset($_POST['price'])
-    && isset($_POST['photo']) && isset($_POST['description']) 
+    && isset($_POST['description']) 
     && !empty($_POST['name']) && !empty($_POST['price']) && !empty($_POST['description'])) {
 
-    $result = Diet::addDiet($_POST['name'],$_POST['price'],$_POST['photo'],$_POST['description']);
+    $result = Diet::addDiet($_POST['name'],$_POST['price'],$_POST['description']);
     if(empty($result)) {
         echo "Dieta dodana";
         unset($_SESSION['diet_name']);
