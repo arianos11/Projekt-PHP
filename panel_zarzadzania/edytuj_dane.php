@@ -4,20 +4,22 @@
 
 @include_once(__DIR__.'/../classes/User.php');
 
+User::checkUser($_SESSION['logged']);
+
 $data = User::getUserData($_SESSION['logged']);
 
 ?>
 
 <section>
-    <h1>Edytuj dane</h1>
-    <form action="edytuj_dane.php" method="post">
-        <input type="text" name="user_first_name" id="user_first_name" placeholder="Imie" value="<?php echo $data[0]['user_first_name'];?>">
-        <input type="text" name="user_last_name" id="user_last_name" placeholder="Nazwisko" value="<?php echo $data[0]['user_last_name'];?>">
-        <input type="text" name="user_email" id="user_email" placeholder="email" value="<?php echo $data[0]['user_email'];?>">
-        <input type="text" name="user_city" id="user_city" placeholder="Miasto" value="<?php echo $data[0]['user_city'];?>">
-        <input type="text" name="user_postal_code" id="user_postal_code" placeholder="Kod pocztowy" value="<?php echo $data[0]['user_postal_code'];?>">
-        <input type="text" name="user_adress" id="user_adress" placeholder="Adres" value="<?php echo $data[0]['user_adress'];?>">
-        <input type="submit" value="Zapisz">
+    <form class="login" action="edytuj_dane.php" method="post">
+        <h1>Edytuj dane</h1>
+        <input class="login--input" type="text" name="user_first_name" id="user_first_name" placeholder="Imie" value="<?php echo $data[0]['user_first_name'];?>">
+        <input class="login--input" type="text" name="user_last_name" id="user_last_name" placeholder="Nazwisko" value="<?php echo $data[0]['user_last_name'];?>">
+        <input class="login--input" type="text" name="user_email" id="user_email" placeholder="email" value="<?php echo $data[0]['user_email'];?>">
+        <input class="login--input" type="text" name="user_city" id="user_city" placeholder="Miasto" value="<?php echo $data[0]['user_city'];?>">
+        <input class="login--input" type="text" name="user_postal_code" id="user_postal_code" placeholder="Kod pocztowy" value="<?php echo $data[0]['user_postal_code'];?>">
+        <input class="login--input" type="text" name="user_adress" id="user_adress" placeholder="Adres" value="<?php echo $data[0]['user_adress'];?>">
+        <input class="login--input__button" type="submit" value="Zapisz">
     </form>
 </section>
 

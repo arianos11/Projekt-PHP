@@ -4,12 +4,16 @@
 
 @include_once(__DIR__.'/../classes/Order.php');
 
+@include_once(__DIR__.'/../classes/User.php');
+
+User::checkUser($_SESSION['logged']);
+
 ?>
 
-<section>
+<section class="userPanel">
     <h1>Panel zarządzania</h1>
-    <a href="zmiana_hasla.php">Zmiana Hasła</a>
-    <a href="edytuj_dane.php">Edytuj Dane</a>
+    <a class="userPanel--button" href="zmiana_hasla.php">Zmiana Hasła</a>
+    <a class="userPanel--button" href="edytuj_dane.php">Edytuj Dane</a>
     <h2>Twoje zamówienia</h2>
     <table>
         <tr>

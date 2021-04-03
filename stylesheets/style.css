@@ -117,7 +117,25 @@
       border-radius: 2rem; }
 
 .mainAdmin {
-  margin-left: 20vw; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+table, th, td {
+  border: 1px solid black;
+  padding: 1rem; }
+
+.navAdmin {
+  background-color: #34495e;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-end; }
+  .navAdmin a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    padding: 1rem; }
 
 .login {
   position: absolute;
@@ -144,3 +162,14 @@
       background-color: #3498db;
       padding: .1rem 2rem;
       color: #fff; }
+
+.userPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .userPanel h1, .userPanel h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .userPanel--button {
+    font-size: 1.3rem; }

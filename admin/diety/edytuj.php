@@ -12,13 +12,13 @@ $diet = Diet::getDiet($_GET['id']);
 ?>
 
 <section class="mainAdmin">
-    <form action="edytuj.php?id=<?php echo $_GET['id']?>" method="post">
-        <input type="text" name="name" id="name" placeholder="Nazwa diety" value="<?php echo $diet[0]['diet_name']?>">
-        <input type="number" name="price" id="price" placeholder="Cena" value="<?php echo $diet[0]['diet_price']?>">
-        <input type="file" name="photo" id="photo" value="<?php echo $diet[0]['diet_photo']?>">
-        <textarea name="description" id="description" cols="30" rows="10" placeholder="Opis diety"><?php echo $diet[0]['diet_description']?></textarea>
-        <input type="checkbox" name="status" id="status">
-        <input type="submit" value="Zapisz">
+    <form class="login" action="edytuj.php?id=<?php echo $_GET['id']?>" method="post">
+        <input class="login--input" type="text" name="name" id="name" placeholder="Nazwa diety" value="<?php echo $diet[0]['diet_name']?>">
+        <input class="login--input" type="number" name="price" id="price" placeholder="Cena" value="<?php echo $diet[0]['diet_price']?>">
+        <input class="login--input" type="file" name="photo" id="photo" value="<?php echo $diet[0]['diet_photo']?>">
+        <textarea class="login--input" name="description" id="description" cols="30" rows="10" placeholder="Opis diety"><?php echo $diet[0]['diet_description']?></textarea>
+        <input class="login--input" type="checkbox" name="status" id="status">
+        <input class="login--input__button" type="submit" value="Zapisz">
     </form>
 </section>
  

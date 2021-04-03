@@ -1,3 +1,25 @@
 .mainAdmin {
-    margin-left: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.navAdmin {
+    background-color: $color-second;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    
+    a {
+        color: white;
+        text-decoration: none;
+        margin-left: 2rem;
+        padding: 1rem;
+    }
 }

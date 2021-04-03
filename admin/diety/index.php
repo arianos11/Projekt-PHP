@@ -11,7 +11,7 @@ Admin::checkAdmin($_SESSION['admin_logged']);
 ?>
 
 <section class="mainAdmin">
-    <h1>Diety</h1>
+    <h1 style="text-align:center; margin-top: 1rem;">Diety</h1>
     <table>
         <tr>
            <th>Id</th> 
@@ -45,7 +45,7 @@ Admin::checkAdmin($_SESSION['admin_logged']);
         ?>
     </table>
     <br>
-    <a href="dodaj.php">Dodaj nową</a>
+    <a style="background-color: #2ecc71; color: white; text-decoration: none; padding: .5rem 2rem; border-radius: 1rem;" href="dodaj.php">Dodaj nową</a>
 </section>
  
 <?php

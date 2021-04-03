@@ -131,6 +131,16 @@
 
         }
 
+        public static function checkUser($login) {
+
+            if($login) {
+                return true;
+            } else {
+                return header("Location: /projektArianOrwat4D/logowanie.php");
+            }
+
+        }
+
     }
 
 ?>

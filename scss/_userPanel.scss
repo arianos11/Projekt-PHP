@@ -1,0 +1,15 @@
+.userPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1,h2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &--button {
+        font-size: 1.3rem;
+    }
+}

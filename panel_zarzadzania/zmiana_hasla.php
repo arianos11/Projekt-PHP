@@ -5,14 +5,16 @@
 
 @include_once(__DIR__.'/../classes/User.php');
 
+User::checkUser($_SESSION['logged']);
+
 ?>
 
 <section>
-    <h1>Zmiana hasła</h1>
-    <form action="zmiana_hasla.php" method="post">
-        <input type="password" name="password1" id="password1">
-        <input type="password" name="password2" id="password2">
-        <input type="submit" value="Zmień">
+    <form class="login" action="zmiana_hasla.php" method="post">
+        <h1>Zmiana hasła</h1>
+        <input class="login--input" type="password" name="password1" id="password1" placeholder="Hasło">
+        <input class="login--input" type="password" name="password2" id="password2" placeholder="Powtórz hasło">
+        <input class="login--input__button" type="submit" value="Zmień">
         <p style="color: red"><?php echo isset($_SESSION['changePassword_error']) ? $_SESSION['changePassword_error'] : '' ?></p>
     </form>
 </section>

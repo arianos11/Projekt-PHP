@@ -2,16 +2,16 @@
 
 @include_once(__DIR__.'/../adminModules/startAdmin.php');
 
-print_r($_SESSION);
-
 ?>
 
-<form action="logowanie.php" method="post">
-    <input type="text" name="email" placeholder="Adres email" value="<?php echo isset($_SESSION['admin_login_email']) ? $_SESSION['admin_login_email'] : '' ?>">
-    <input type="password" name="password" placeholder="Hasło">
-    <input type="submit" value="Zaloguj">
+<form class="login" action="logowanie.php" method="post">
+    <h1>Logowanie administratora</h1>
+    <input class="login--input" type="text" name="email" placeholder="Adres email" value="<?php echo isset($_SESSION['admin_login_email']) ? $_SESSION['admin_login_email'] : '' ?>">
+    <input class="login--input" type="password" name="password" placeholder="Hasło">
+    <input class="login--input__button" type="submit" value="Zaloguj">
+    <p style="color: red"><?php echo isset($_SESSION['admin_login_error']) ? $_SESSION['admin_login_error'] : '' ?></p>
 </form>
-<p style="color: red"><?php echo isset($_SESSION['admin_login_error']) ? $_SESSION['admin_login_error'] : '' ?></p>
+
 
 <?php
 

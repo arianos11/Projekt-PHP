@@ -4,6 +4,10 @@
 
 @include_once(__DIR__.'/../classes/Order.php');
 
+@include_once(__DIR__.'/../classes/User.php');
+
+User::checkUser($_SESSION['logged']);
+
 $data = Order::deleteOrder($_SESSION['logged'], $_GET['id']);
 
 if(!empty($data)) {

@@ -6,8 +6,8 @@
     </div>
     <div class="menu--right">
         <a href="/projektArianOrwat4D/" class="menu--right--element">Start</a>
-        <a href="/jak-gotujemy" class="menu--right--element">Jak gotujemy</a>
-        <a href="/oferta" class="menu--right--element">Oferta</a>
+        <a href="jak_gotujemy.php" class="menu--right--element">Jak gotujemy</a>
+        <a href="oferta.php" class="menu--right--element">Oferta</a>
         <?php 
             if(isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
                 echo "<a href='/projektArianOrwat4D/panel_zarzadzania' class='menu--right--element'>Panel zarządzania</a>";

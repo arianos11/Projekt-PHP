@@ -1,4 +1,4 @@
-<nav>
+<nav class="navAdmin">
     <?php
         if($_SESSION['admin_logged']) {
     ?>
