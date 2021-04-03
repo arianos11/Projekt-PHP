@@ -5,7 +5,7 @@
         public $db_url = "localhost";
         public $db_user = "root";
         public $db_password = "";
-        public $db_name = 'projektphp';
+        public $db_name = 'projektArianOrwat4D';
         public $conn;
         public $query;
         public $status = FALSE;

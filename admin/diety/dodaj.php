@@ -27,9 +27,8 @@ if(isset($_POST['name']) && isset($_POST['price'])
     && !empty($_POST['name']) && !empty($_POST['price']) && !empty($_POST['description'])) {
 
     $result = Diet::addDiet($_POST['name'],$_POST['price'],$_POST['photo'],$_POST['description']);
-    print_r($result);
     if(empty($result)) {
-        echo "Success";
+        echo "Dieta dodana";
         unset($_SESSION['diet_name']);
         unset($_SESSION['diet_price']);
         unset($_SESSION['diet_photo']);

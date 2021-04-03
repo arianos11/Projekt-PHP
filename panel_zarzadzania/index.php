@@ -14,6 +14,7 @@ User::checkUser($_SESSION['logged']);
     <h1>Panel zarządzania</h1>
     <a class="userPanel--button" href="zmiana_hasla.php">Zmiana Hasła</a>
     <a class="userPanel--button" href="edytuj_dane.php">Edytuj Dane</a>
+    <a class="userPanel--button" href="/projektArianOrwat4D/wyloguj.php">Wyloguj</a>
     <h2>Twoje zamówienia</h2>
     <table>
         <tr>
